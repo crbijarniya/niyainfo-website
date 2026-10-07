@@ -2,11 +2,498 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>NIYAINFO Private Limited</title>
-  <!-- Local preview helper: the real site lives in niyainfo-website/ -->
-  <meta http-equiv="refresh" content="0; url=niyainfo-website/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>NIYAINFO Private Limited | Weighbridge Automation for Rajasthan Mines</title>
+  <meta name="description" content="NIYAINFO Private Limited installs and configures automated weighbridges as per the Rajasthan Mining Department SOP under Rule 73A — RFID reader, ultrasonic position sensors, IP cameras, controller and eRawanna integration. 100+ sites across Rajasthan." />
+  <meta name="theme-color" content="#11396C" />
+  <link rel="icon" href="assets/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <p><a href="niyainfo-website/index.html">Open the website</a></p>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="NIYAINFO Private Limited home">
+        <img src="assets/logo.png" alt="NIYAINFO Private Limited" width="180" height="39" />
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#system">The system</a>
+        <a href="#process">How it works</a>
+        <a href="#requirements">Site requirements</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Installations</a>
+        <a href="#contact" class="nav-cta">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO + INTERACTIVE SITE DIAGRAM ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1>Weighbridge automation exactly as the SOP asks for it.</h1>
+        <p class="lede">
+          We install the complete hardware at your weighbridge and configure it with
+          eRawanna, following the Mining Department's SOP under Rule 73A of the Rajasthan
+          Minor Mineral Concession Rules, 2017. Every truck is identified, positioned,
+          photographed and weighed without manual entry.
+          More than 100 weighbridges in Rajasthan already run on our system.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a site survey</a>
+          <a href="tel:+919289607598" class="btn btn-ghost">Call 92896 07598</a>
+        </div>
+      </div>
+
+      <figure class="hero-media">
+        <img src="assets/photos/weighbridge-site.jpg" alt="Truck loaded with stone blocks on a weighbridge we automated in Rajasthan" width="1156" height="868" fetchpriority="high" />
+        <div class="hero-badge hero-badge-top">
+          <strong>100+</strong>
+          <span>weighbridges<br />automated</span>
+        </div>
+        <div class="hero-badge hero-badge-bottom">
+          <span class="badge-check" aria-hidden="true">
+            <svg viewBox="0 0 20 20" width="14" height="14"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </span>
+          <span><b>Rule 73A SOP</b><br />eRawanna integrated</span>
+        </div>
+      </figure>
+      </div>
+
+      <div id="system" class="wrap system">
+        <div class="diagram-card">
+          <div class="diagram-head">
+            <h2>What we install at every weighbridge</h2>
+            <button class="btn btn-small" id="play-btn" type="button">Watch a truck pass</button>
+          </div>
+
+          <div class="diagram-wrap">
+            <svg id="site-diagram" viewBox="0 0 1000 470" role="img" aria-labelledby="diagram-title diagram-desc">
+              <title id="diagram-title">Layout of an automated weighbridge as per the SOP</title>
+              <desc id="diagram-desc">A truck on the weighbridge platform with an RFID reader, three ultrasonic position sensors, a top view camera C1, a number plate camera C2, and a cabin holding the controller, PC, digitizer, network switch and camera C3, connected to eRawanna.</desc>
+
+              <rect x="0" y="0" width="1000" height="470" class="d-ground" />
+
+              <!-- road -->
+              <rect x="0" y="180" width="1000" height="130" class="d-road" />
+              <line x1="0" y1="180" x2="1000" y2="180" class="d-road-edge" />
+              <line x1="0" y1="310" x2="1000" y2="310" class="d-road-edge" />
+              <line x1="20" y1="245" x2="300" y2="245" class="d-road-mark" />
+              <line x1="700" y1="245" x2="980" y2="245" class="d-road-mark" />
+              <text x="20" y="172" class="d-label-muted">Vehicle entry</text>
+
+              <!-- weighbridge platform -->
+              <rect x="320" y="192" width="360" height="106" rx="3" class="d-platform" />
+              <g class="d-platform-ribs">
+                <line x1="380" y1="192" x2="380" y2="298" />
+                <line x1="440" y1="192" x2="440" y2="298" />
+                <line x1="500" y1="192" x2="500" y2="298" />
+                <line x1="560" y1="192" x2="560" y2="298" />
+                <line x1="620" y1="192" x2="620" y2="298" />
+              </g>
+              <text x="500" y="378" text-anchor="middle" class="d-label-muted">Weighbridge platform</text>
+
+              <!-- cabin -->
+              <rect x="720" y="15" width="275" height="160" rx="8" class="d-cabin" />
+              <text x="857" y="36" text-anchor="middle" class="d-label-muted">Weighbridge cabin</text>
+
+              <!-- cabling -->
+              <g class="d-wires">
+                <path d="M642 160 V167 H720" />
+                <path d="M500 118 V167" />
+                <path d="M330 338 V430 H700 V176" />
+                <path d="M500 338 V430" />
+                <path d="M670 338 V430" />
+                <path d="M780 388 V430" />
+              </g>
+              <path id="data-line" d="M960 175 V400" class="d-data" />
+
+              <!-- truck -->
+              <g id="truck" class="d-truck">
+                <rect x="0" y="210" width="200" height="70" rx="4" class="d-truck-body" />
+                <rect x="206" y="214" width="52" height="62" rx="8" class="d-truck-cab" />
+                <rect x="240" y="218" width="12" height="54" rx="3" class="d-truck-glass" />
+                <line x1="20" y1="225" x2="180" y2="225" class="d-truck-load" />
+                <line x1="20" y1="245" x2="180" y2="245" class="d-truck-load" />
+                <line x1="20" y1="265" x2="180" y2="265" class="d-truck-load" />
+              </g>
+
+              <!-- sensor beams -->
+              <g class="d-beams">
+                <line id="beam-1" x1="330" y1="338" x2="330" y2="186" />
+                <line id="beam-2" x1="500" y1="338" x2="500" y2="186" />
+                <line id="beam-3" x1="670" y1="338" x2="670" y2="186" />
+              </g>
+
+              <!-- camera view cones -->
+              <g class="d-cones">
+                <path id="cone-1" d="M500 118 L395 192 L605 192 Z" />
+                <path id="cone-2" d="M780 372 L700 310 L580 310 Z" />
+                <path id="cone-3" d="M952 82 L902 92 L902 62 Z" />
+              </g>
+
+              <!-- ===== HOTSPOTS ===== -->
+              <g class="hotspot" tabindex="0" role="button" data-part="rfid" aria-label="RFID reader">
+                <rect x="622" y="128" width="40" height="32" rx="4" class="hs-box" />
+                <path d="M634 146 a8 8 0 0 1 16 0 M638 146 a4 4 0 0 1 8 0" class="hs-icon" />
+                <text x="642" y="118" text-anchor="middle" class="d-label">RFID reader</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="camera" aria-label="Camera C1, top view">
+                <circle cx="500" cy="104" r="14" class="hs-box" />
+                <circle cx="500" cy="104" r="5" class="hs-icon-fill" />
+                <text x="472" y="100" text-anchor="end" class="d-label">Camera C1 — top view</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="camera" aria-label="Camera C2, number plate">
+                <circle cx="780" cy="372" r="14" class="hs-box" />
+                <circle cx="780" cy="372" r="5" class="hs-icon-fill" />
+                <text x="760" y="348" text-anchor="middle" class="d-label">Camera C2 — number plate</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="sensor" aria-label="Position sensor 1">
+                <rect x="320" y="322" width="20" height="16" rx="3" class="hs-box" />
+              </g>
+              <g class="hotspot" tabindex="0" role="button" data-part="sensor" aria-label="Position sensor 2">
+                <rect x="490" y="322" width="20" height="16" rx="3" class="hs-box" />
+              </g>
+              <g class="hotspot" tabindex="0" role="button" data-part="sensor" aria-label="Position sensor 3">
+                <rect x="660" y="322" width="20" height="16" rx="3" class="hs-box" />
+              </g>
+              <text x="300" y="336" text-anchor="end" class="d-label">Position sensors ×3</text>
+
+              <!-- cabin devices -->
+              <g class="hotspot" tabindex="0" role="button" data-part="controller" aria-label="Controller">
+                <rect x="735" y="48" width="70" height="40" rx="6" class="hs-box" />
+                <circle cx="752" cy="62" r="4" class="hs-led" id="led" />
+                <line x1="748" y1="76" x2="790" y2="76" class="hs-icon" />
+                <text x="770" y="106" text-anchor="middle" class="d-label">Controller</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="pc" aria-label="PC and weighbridge digitizer">
+                <rect x="825" y="48" width="70" height="40" rx="4" class="hs-box" />
+                <line x1="838" y1="62" x2="882" y2="62" class="hs-icon" />
+                <line x1="838" y1="74" x2="866" y2="74" class="hs-icon" />
+                <text x="860" y="106" text-anchor="middle" class="d-label">PC + digitizer</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="camera" aria-label="Camera C3, digitizer and screen view">
+                <circle cx="952" cy="72" r="13" class="hs-box" />
+                <circle cx="952" cy="72" r="4.5" class="hs-icon-fill" />
+                <text x="952" y="106" text-anchor="middle" class="d-label">C3</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="network" aria-label="PoE switch, router and power backup">
+                <rect x="735" y="120" width="90" height="34" rx="4" class="hs-box" />
+                <line x1="748" y1="132" x2="812" y2="132" class="hs-icon" />
+                <line x1="748" y1="142" x2="790" y2="142" class="hs-icon" />
+                <text x="838" y="142" class="d-label">Switch, router, UPS</text>
+              </g>
+
+              <g class="hotspot" tabindex="0" role="button" data-part="erawanna" aria-label="eRawanna portal">
+                <rect x="860" y="400" width="120" height="46" rx="23" class="hs-box hs-cloud" />
+                <text x="920" y="429" text-anchor="middle" class="d-cloud-text">eRawanna</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="part-panel" aria-live="polite">
+            <div class="part-tabs" role="tablist" aria-label="System components">
+              <button role="tab" data-part="rfid">RFID reader</button>
+              <button role="tab" data-part="sensor">Position sensors</button>
+              <button role="tab" data-part="camera">Cameras C1, C2, C3</button>
+              <button role="tab" data-part="controller">Controller</button>
+              <button role="tab" data-part="pc">PC + digitizer</button>
+              <button role="tab" data-part="network">Network &amp; power</button>
+              <button role="tab" data-part="erawanna">eRawanna</button>
+            </div>
+            <div class="part-body">
+              <img id="part-img" class="part-img" alt="" hidden />
+              <p class="part-qty" id="part-qty"></p>
+              <h3 id="part-title"></h3>
+              <p id="part-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MANDATE ============ -->
+    <section class="mandate">
+      <div class="wrap mandate-grid">
+        <div>
+          <h2>Built to the Mining Department's SOP</h2>
+        </div>
+        <div class="mandate-copy">
+          <p>
+            Under Rule 73A of the Rajasthan Minor Mineral Concession Rules, 2017, the
+            Department of Mines and Geology has issued a detailed SOP for automating
+            weighbridges. It fixes the hardware, its specifications, where each device
+            goes, the pole heights, the cabling and the site's power and internet needs.
+          </p>
+          <p>
+            We work only to that SOP. Our teams have automated more than 100 weighbridges
+            across Rajasthan, so the layout, the installation and the eRawanna configuration
+            are done right the first time and the site clears inspection without rework.
+          </p>
+          <ul class="facts">
+            <li><strong>100+ weighbridges</strong><span>Automated across Rajasthan</span></li>
+            <li><strong>Rule 73A SOP</strong><span>Hardware and layout as specified</span></li>
+            <li><strong>End to end</strong><span>Hardware, eRawanna setup and support</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section id="process" class="process">
+      <div class="wrap">
+        <h2>What happens when a truck arrives</h2>
+        <p class="section-lede">The whole weighment is recorded without anyone typing a vehicle number or a weight.</p>
+        <ol class="steps">
+          <li data-step="1">
+            <h3>Truck is identified</h3>
+            <p>The RFID reader reads the RFID tag or FASTag on the vehicle's mirror from 3 to 6 metres away.</p>
+          </li>
+          <li data-step="2">
+            <h3>Position is checked</h3>
+            <p>Three ultrasonic position sensors detect the vehicle and confirm it is correctly placed for weighment.</p>
+          </li>
+          <li data-step="3">
+            <h3>Photos are captured</h3>
+            <p>C1 takes the top view for mineral identification, C2 reads the number plate, and C3 captures the digitizer and PC screen.</p>
+          </li>
+          <li data-step="4">
+            <h3>Weight is recorded</h3>
+            <p>The weight comes from the weighbridge digitizer, and the controller ties it together with the vehicle and the photos.</p>
+          </li>
+          <li data-step="5">
+            <h3>Data goes to eRawanna</h3>
+            <p>The complete weighment record is sent to eRawanna over the site's static IP connection.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SOP REQUIREMENTS ============ -->
+    <section id="requirements" class="requirements">
+      <div class="wrap">
+        <h2>What a site needs, as per the SOP</h2>
+        <p class="section-lede">This is the checklist we work to at every weighbridge. We supply, install and configure the hardware. The civil work, power and internet are arranged at the site by the lease holder.</p>
+
+        <div class="req-grid">
+          <div class="req-col">
+            <h3>Mandatory hardware</h3>
+            <ul>
+              <li><strong>RFID reader ×1</strong> — 865 to 867 MHz, 3 to 6 m read range. One more on the other side for two-way movement.</li>
+              <li><strong>Position sensors ×3</strong> — ultrasonic, 200 to 2000 mm range, IP65.</li>
+              <li><strong>IP bullet camera C1 ×1</strong> — 2 MP, top view of the load for mineral identification.</li>
+              <li><strong>IP bullet camera C2 ×1</strong> — 4 MP varifocal, front view for number plate reading, with external IR illuminator.</li>
+              <li><strong>IP bullet camera C3 ×1</strong> — 2 MP, image of the digitizer and PC screen.</li>
+              <li><strong>Controller ×1</strong> — 8-channel isolated I/O, MODBUS over Ethernet or RTU.</li>
+              <li><strong>PC ×1</strong> — Intel i5 10th generation or higher, 16 GB RAM, 1 TB storage, Windows 11.</li>
+              <li><strong>PoE network switch ×1</strong> — 8+2 port, minimum 190 W PoE budget.</li>
+            </ul>
+          </div>
+
+          <div class="req-col">
+            <h3>Optional hardware</h3>
+            <ul>
+              <li><strong>LED display</strong> — shows messages and instructions during weighment, MQTT or API based.</li>
+              <li><strong>PA system or speaker</strong> — voice announcements to guide the driver.</li>
+              <li><strong>Traffic lights ×2</strong> — red and green stop/go signals for the driver.</li>
+              <li><strong>Boom barrier with safety sensor</strong> — releases the vehicle after weighment.</li>
+            </ul>
+
+            <h3 class="req-sub">Mounting heights</h3>
+            <ul>
+              <li>Position sensors at 1500 mm from the platform.</li>
+              <li>Camera C1 at 7600 to 7800 mm, with all four corners of the platform visible.</li>
+              <li>Camera C2 at 1800 to 2000 mm, facing the incoming vehicle.</li>
+              <li>Camera C3 as per the height of the cabin, covering the digitizer and the PC screen.</li>
+            </ul>
+          </div>
+
+          <div class="req-col">
+            <h3>Arranged at the site</h3>
+            <ul>
+              <li>Poles P1 to P4 and side railing — hot dip galvanised poles on CC foundation. P1 and P2 at 1800 to 2000 mm, P3 at 2800 to 3000 mm, P4 at 7800 to 8000 mm; railing at least 600 mm high for a pit type weighbridge.</li>
+              <li>Electricity supply with online UPS backup as per requirement.</li>
+              <li>Dedicated 20 Mbps leased line, broadband or AirFiber connection.</li>
+              <li>A public static IP on that connection.</li>
+              <li>NAT and port forwarding support on the service provider's router.</li>
+            </ul>
+
+            <h3 class="req-sub">Cabling</h3>
+            <ul>
+              <li>4 core shielded cable for the sensors.</li>
+              <li>Outdoor Cat-6 cable for the cameras and network devices.</li>
+              <li>RS232 cable from the weighbridge digitizer.</li>
+              <li>Power distribution unit and online UPS inside the cabin.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="req-note">
+          Hardware positions and the civil layout can be changed by the ME or AME as per site
+          feasibility. We confirm the final layout with the department before starting work.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="services">
+      <div class="wrap services-grid">
+        <div class="services-intro">
+          <h2>What we do for you</h2>
+          <p>From the first visit to your site until the system is live on eRawanna, one team takes care of it.</p>
+          <a href="#contact" class="btn btn-primary">Talk to our team</a>
+        </div>
+        <dl class="service-list">
+          <div>
+            <dt>Site survey and layout</dt>
+            <dd>We visit your weighbridge, check the approach, power and network, and mark where each device has to go as per the SOP.</dd>
+          </div>
+          <div>
+            <dt>Hardware supply and installation</dt>
+            <dd>RFID reader, ultrasonic sensors, cameras C1, C2 and C3 with IR illuminator, controller, PoE switch, PC and cabling, installed and aligned by our field team.</dd>
+          </div>
+          <div>
+            <dt>eRawanna configuration</dt>
+            <dd>We integrate the digitizer and the devices with the application and test live weighments until records reach eRawanna correctly.</dd>
+          </div>
+          <div>
+            <dt>Camera tuning for number plate reading</dt>
+            <dd>C2 is set within the SOP's angle limits and at the right height for the detection distance, so plates are read accurately at night as well.</dd>
+          </div>
+          <div>
+            <dt>Training</dt>
+            <dd>Your weighbridge staff learn how the system works and what to do in common situations.</dd>
+          </div>
+          <div>
+            <dt>Maintenance and support</dt>
+            <dd>If a device stops working, our team helps you get it back online quickly.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <!--
+      HOW TO ADD MORE PHOTOS:
+      1. Put the photo in assets/photos/
+      2. Copy one <figure> block below and change the src, alt and figcaption.
+    -->
+    <section id="gallery" class="gallery">
+      <div class="wrap">
+        <h2>Our installations</h2>
+        <p class="section-lede">More than 100 weighbridges automated across Rajasthan. Here is some of the equipment on site.</p>
+
+        <div class="gallery-grid">
+          <figure class="g-wide">
+            <img src="assets/photos/weighbridge-site.jpg" alt="Truck loaded with stone blocks standing on an automated weighbridge in Rajasthan" loading="lazy" width="1156" height="868" />
+            <figcaption>Automated weighbridge site, Rajasthan</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/rfid-reader.jpg" alt="RFID reader panel mounted on a pole at the weighbridge entry" loading="lazy" />
+            <figcaption>RFID reader</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/position-sensor.jpg" alt="Ultrasonic position sensor mounted on a pole beside the weighbridge" loading="lazy" class="pos-sensor" />
+            <figcaption>Ultrasonic position sensor</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/front-camera.jpg" alt="Number plate camera and position sensor mounted on a pole" loading="lazy" />
+            <figcaption>Camera C2, number plate</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/photos/top-camera.jpg" alt="Top view camera on a tall pole above the weighbridge" loading="lazy" />
+            <figcaption>Camera C1, top view</figcaption>
+          </figure>
+          <!-- Controller photo: add another <figure> here with assets/photos/controller.jpg -->
+        </div>
+
+        <div class="video-block">
+          <video poster="assets/video/site-poster.jpg" controls playsinline preload="metadata">
+            <source src="assets/video/site.mp4" type="video/mp4" />
+            <a href="assets/video/site.mp4">Download the site video</a>
+          </video>
+          <div class="video-copy">
+            <h3>A walk through one of our sites</h3>
+            <p>This video shows a weighbridge after automation: the poles carrying the RFID reader and cameras, the position sensors along the platform and the weighbridge cabin.</p>
+            <p>We set up every site to the same SOP, so the department gets the same quality of data from all of them.</p>
+            <a href="#contact" class="btn btn-primary">Book a site survey</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-info">
+          <h2>Get your weighbridge automated</h2>
+          <p>Tell us where your weighbridge is and we will get back to you with the next steps. For a quick answer, call us on <a href="tel:+919289607598">92896 07598</a>.</p>
+
+          <address>
+            <strong>NIYAINFO Pvt. Ltd.</strong><br />
+            6th Floor, Plot No. 9, Supremeworks, Sector 125,<br />
+            Noida, Gautam Buddha Nagar,<br />
+            Uttar Pradesh 201303, India
+          </address>
+
+          <ul class="contact-lines">
+            <li><span>Email</span><a href="mailto:niyainfo65@gmail.com">niyainfo65@gmail.com</a></li>
+            <li><span>Phone</span><a href="tel:+919289607598">+91 92896 07598</a></li>
+            <li><span>WhatsApp</span><a href="https://wa.me/919289607598" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+            <li><span>GSTIN</span>09AAICN2628Q1ZS</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone number</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+          </div>
+          <div class="field">
+            <label for="f-site">Mine / weighbridge location</label>
+            <input id="f-site" name="site" type="text" placeholder="e.g. village, district" />
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="4"></textarea>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary btn-block">Send enquiry</button>
+          <p class="form-note">This opens your email app with the details filled in.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>NIYAINFO Private Limited</strong><br />Weighbridge automation and eRawanna integration, Rajasthan<br /><a href="tel:+919289607598">+91 92896 07598</a> &nbsp; <a href="mailto:niyainfo65@gmail.com">niyainfo65@gmail.com</a></p>
+      <p class="footer-meta">GSTIN 09AAICN2628Q1ZS<br />&copy; <span id="year"></span> NIYAINFO Pvt. Ltd.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
