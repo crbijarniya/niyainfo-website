@@ -99,6 +99,13 @@ p { margin: 0; }
   padding-bottom: 72px;
 }
 .hero-text { text-align: left; }
+.eyebrow {
+  display: inline-block; margin-bottom: 18px;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.8rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--navy); background: var(--cyan-soft);
+  padding: 0.45em 0.9em; border-radius: 999px;
+}
 .hero h1 {
   font-size: clamp(2rem, 4.6vw, 3.4rem);
   font-weight: 800;
